@@ -13,6 +13,7 @@
     --default_vertical-padding: 5px;
     --input-text-border-width: 1px;
     --input-text-horizontal-padding: 5px;
+    --input-text-vertical-padding: 3px;
 }
 * {
     font-family: var(--default-font);
@@ -51,23 +52,19 @@ h1 {
 }
 .label-text {
     position: relative;
-    background-color: lightcoral;
+    /* background-color: lightcoral; */
     width: 300px;
 }
 .input-text {
     display: block;   
     border: var(--input-text-border-width) solid var(--light-grey);
     border-radius: 5px;
-    padding: 3px var(--input-text-horizontal-padding);
-    padding: 10px;
-    padding: 10px 20px;
-    padding: 1px 2px 3px;
-    padding: 1px 10px 4px 5px;
+    padding: var(--input-text-vertical-padding) var(--input-text-horizontal-padding);
     font-size: 14px;
 }
 .label-text .input-text {
     position: relative;
-    width: calc(100% - 2* var(--input-text-border-width) - 2 * var(--input-text-horizontal-padding)); /* -2*border-width (1px) -2*horizontal-padding (5px) */
+    width: calc(100% - 2 * var(--input-text-border-width) - 2 * var(--input-text-horizontal-padding)); /* -2*border-width (1px) -2*horizontal-padding (5px) */
 }
 .label-text label {
     display: block;
