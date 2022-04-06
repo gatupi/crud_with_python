@@ -5,139 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=s, initial-scale=1.0">
     <title>Document</title>
-    <style>
-        body {
-            background-color: rgb(250, 250, 250);
-        }
-        * {
-            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-            margin: 0;
-        }
-        header {
-            background-color: #304d63;
-            margin: 0 auto;
-            padding: 0;
-            color: rgb(250, 250, 250);
-        }
-        .main-menu {
-            background-color: #8fb9aa;
-            padding: 5px;
-        }
-        .main-menu span {
-            margin: 0px 20px;
-        }
-        h1 {
-            position: relative;
-            text-align: center;
-            margin: auto;
-        }
-        .customer-register {
-            /* background-color: rgb(153, 190, 223); */
-            width: 1000px;
-            margin: 30px auto;
-        }
-        .form-part {
-            background-color: rgb(209, 227, 243);
-            padding: 15px;
-        }
-        .form-part:nth-of-type(1) {
-            /* background-color: lightcoral; */
-            border-top-right-radius: 15px;
-            /* border-top-left-radius: 15px; */
-            /* border-top: 1px solid rgb(85, 85, 85);
-            border-left: 1px solid rgb(85, 85, 85);
-            border-right: 1px solid rgb(85, 85, 85); */
-        }
-        /* .form-part:nth-of-type(2) {
-            background-color: lightblue;
-            border-left: 1px solid rgb(85, 85, 85);
-            border-right: 1px solid rgb(85, 85, 85);
-        } */
-        .form-part:nth-of-type(3) {
-            border-bottom-left-radius: 15px;
-            border-bottom-right-radius: 15px;
-            /* background-color: lightgoldenrodyellow; */
-            /* border-left: 1px solid rgb(85, 85, 85);
-            border-right: 1px solid rgb(85, 85, 85);
-            border-bottom: 1px solid rgb(85, 85, 85); */
-        }
-        .name-part {
-            /* background-color: lightgrey; */
-            display: flex;
-            justify-content: space-between;
-        }
-        .birth-date-part {
-            /* background-color: lightgoldenrodyellow; */
-            display: flex;
-            justify-content: space-between;
-        }
-        .label-text {
-            position: relative;
-            /* background-color: lightcoral; */
-            width: 300px;
-        }
-        .label-text input {
-            position:relative;
-            display: block;
-            width: calc(100% - 12px);
-            height: 18px;
-            border: 1px solid rgb(150,150,150);
-            border-radius: 5px;
-            padding: 2px 5px;
-        }
-        /* .radio-box {
-            background-color: lightgreen;
-        } */
-        .radio-box span {
-            display: block;
-        }
-        .gender-part {
-            display: flex;
-            justify-content: space-between;
-        }
-        .gender-part .title {
-            padding-bottom: 5px;
-        }
-        #full-name {
-            display: block;
-            padding-top: 5px;
-            color: rgb(85, 85, 85);
-        }
-        .customer-register .form-title {
-            /* border: 1px solid rgb(85, 85, 85);
-            border-bottom: none; */
-            border-top-left-radius: 15px;
-            border-top-right-radius: 15px;
-            padding: 8px;
-            width: 200px;
-            font-size: 18px;
-            font-weight: bold;
-            text-align: center;
-            background-color: #8fb9aa;
-            color: rgb(15,15,15);
-        }
-        /* .gender-part .options {
-            background-color: lightcoral;
-        } */
-        .gender-part .options button {
-            padding: 5px;
-            width: 100px;
-            position: relative;
-            top: 50%;
-            transform: translate(0%, -50%);
-            border-radius: 10px;
-            border: 1px solid rgb(150,150,150);
-            
-        }
-        .gender-part .options button:nth-of-type(1) {
-            background-color: rgb(220,220,220);
-        }
-        .gender-part .options button:nth-of-type(2) {
-            background-color: rgb(245,245,245);
-            color: #17694e;
-            font-weight: bold;
-        }
-    </style>
+    <link rel="stylesheet" href="css/commerce-style.css">
 </head>
 <body>
     <header>
@@ -154,16 +22,16 @@
                 <div class="form-part">
                     <div class="name-part">
                         <div class="label-text">
-                            <label for="f-name">First name *</label>
-                            <input type="text" id="f-name" oninput="updateFullName()">
+                            <label class="required" for="f-name">First name</label>
+                            <input class="input-text" type="text" id="f-name" oninput="updateFullName()">
                         </div>
                         <div class="label-text">
                             <label for="m-name">Middle name</label>
-                            <input type="text" id="m-name" oninput="updateFullName()">
+                            <input class="input-text" type="text" id="m-name" oninput="updateFullName()">
                         </div>
                         <div class="label-text">
-                            <label for="l-name">Last name *</label>
-                            <input type="text" id="l-name" oninput="updateFullName()">
+                            <label class="required" for="l-name">Last name</label>
+                            <input class="input-text" type="text" id="l-name" oninput="updateFullName()">
                         </div>
                     </div>
                     <span id="full-name"></span>
@@ -171,16 +39,16 @@
                 <div class="form-part">
                     <div class="birth-date-part">
                         <div class="label-text">
-                            <label for="birth-date">Birth date * <span style="font-style:italic; color:rgb(85, 85, 85);">(MM/dd/yyyy)</span></label>         
-                            <input type="text" id="birth-date" oninput="onBirthDateInput()">
+                            <label class="required" for="birth-date">Birth date<span style="font-style:italic; color:rgb(85, 85, 85);"> (MM/dd/yyyy)</span></label>         
+                            <input class="input-text" type="text" id="birth-date" oninput="onBirthDateInput()">
                         </div>
                         <div class="label-text">
-                            <label for="phone-number">Phone number *</label>     
-                            <input type="text" id="phone-number">
+                            <label class="required" for="phone-number">Phone number</label>     
+                            <input class="input-text" type="text" id="phone-number">
                         </div>
                         <div class="label-text">
-                            <label for="email">Email *</label>      
-                            <input type="text" id="email">
+                            <label class="required" for="email">Email</label>      
+                            <input class="input-text" type="text" id="email">
                         </div>
                     </div>
                 </div>                
@@ -202,7 +70,7 @@
             </form>
         </div>
     </main>
-    <script >
+    <script>
         var fullName = '';
 
 
@@ -288,6 +156,11 @@
         fname.focus();
         //fname.setSelectionRange(2,2);
         // console.log(document.activeElement.id);
+
+        var required = document.getElementsByClassName('required');
+        for (var i=0; i<required.length; i++) {
+            required[i].innerHTML += ' *';
+        }
     </script>
 </body>
 </html>
