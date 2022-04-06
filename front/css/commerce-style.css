@@ -40,10 +40,17 @@ h1 {
     text-align: center;
     margin: auto;
 }
-.form-title {
+.form-header {
+    display: inline-block;
+    /*
+        Q: "How can I make a div not larger than its contents?"
+        A: "The solution is to set your div to display: inline-block."
+
+        a div se não tem altura e largura definida auto-cresce
+    */
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
-    padding: 8px;
+    padding: 10px 15px;
     font-size: 18px;
     font-weight: bold;
     text-align: center;
