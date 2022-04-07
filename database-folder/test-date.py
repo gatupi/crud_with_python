@@ -23,3 +23,7 @@ number = None
 strn: str = str(number)
 print(f'type: {type(number)}, value: {number}')
 print(f'type: {type(strn)}, value: {strn}')
+
+values = ['Gabriel', 'Corinthians', 'Futebol', 'Testando']
+print(type(values))
+print(len(values))

@@ -112,6 +112,7 @@ GO
 
 CREATE OR ALTER VIEW SelectAllCustomers AS
 	SELECT
+		Id,
 		dbo.GetCustomerFullName(Id) Name,
 		FORMAT(BirthDate, 'dd/MM/yyyy') BirthDate,
 		dbo.GetCustomerAge(Id) Age,
