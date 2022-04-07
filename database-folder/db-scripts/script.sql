@@ -41,6 +41,23 @@ CREATE TABLE Customer (
 );
 GO
 
+CREATE OR ALTER FUNCTION GetCustomerFullName(@customerId INT) RETURNS NVARCHAR(102)
+BEGIN
+	DECLARE @fname NVARCHAR(30);
+	DECLARE @mname NVARCHAR(40);
+	DECLARE @lname NVARCHAR(30);
+
+	SELECT @fname = FirstName, @mname = MiddleName, @lname = LastName FROM Customer WHERE Id = @customerId;
+	RETURN @fname + ' ' + IIF(@mname IS NOT NULL, @mname + ' ', '') + @lname;
+END
+GO
+
+CREATE OR ALTER FUNCTION GetCustomerAge(@customerId INT) RETURNS INT
+BEGIN
+	RETURN (SELECT dbo.CalculateAge(BirthDate) FROM Customer WHERE Id = @customerId);
+END
+GO
+
 CREATE OR ALTER PROCEDURE InsertCustomer(
 	@id INT,
 	@firstName NVARCHAR(30),
@@ -85,4 +102,21 @@ BEGIN
 		Email = @email
 		WHERE Id = @customerId;
 END
+GO
+
+CREATE OR ALTER PROCEDURE DeleteCustomer(@customerId INT) AS
+BEGIN
+	DELETE FROM Customer WHERE Id = @customerId;
+END
+GO
+
+CREATE OR ALTER VIEW SelectAllCustomers AS
+	SELECT
+		dbo.GetCustomerFullName(Id) Name,
+		FORMAT(BirthDate, 'dd/MM/yyyy') BirthDate,
+		dbo.GetCustomerAge(Id) Age,
+		IIF(Gender = 'M' OR Gender = 'm', 'Male', 'Female') Gender,
+		PhoneNumber,
+		Email
+		FROM Customer;
 GO

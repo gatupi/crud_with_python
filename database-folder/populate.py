@@ -13,6 +13,15 @@ customers = [
         email = "gabriel.tupi.alonso@gmail.com"
     ),
     Customer(
+        id = None,
+        first_name = "Fulano",
+        last_name = "de Tal",
+        birth_date = date(2000,1,1),
+        gender = "M",
+        phone_number = "16991234567",
+        email = "fulano.detal@gmail.com"
+    ),
+    Customer(
         id = 20,
         first_name = "Raphael",
         last_name = "Alonso",

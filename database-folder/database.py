@@ -1,3 +1,4 @@
+from dataclasses import dataclass
 import pyodbc
 from models import Customer
 
@@ -42,7 +43,6 @@ class Database:
             {quote(customer.phone_number)},
             {quote(customer.email)}
             """
-        print(command)
         Database.execute_dml(command)
 
     @staticmethod
@@ -57,5 +57,9 @@ class Database:
             {quote(customer.phone_number)},
             {quote(customer.email)}
         """
-        print(command)
+        Database.execute_dml(command)
+
+    @staticmethod
+    def delete_customer(id: int):
+        command = f"EXEC dbo.DeleteCustomer {number(id)}"
         Database.execute_dml(command)
