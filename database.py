@@ -1,6 +1,7 @@
 import pyodbc
 from models import Customer
 from view_models import CustomerListView
+import json
 
 def db_connect():
     server = 'localhost,1433'

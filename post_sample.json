@@ -1,0 +1,54 @@
+{
+    "customers": [
+        {
+            "id": 10,
+            "first_name": "Gabriel",
+            "middle_name": "Willian",
+            "last_name": "Alonso",
+            "birth_date": "12/08/1997",
+            "gender": "M",
+            "phone_number": "16991229305",
+            "email": "gabriel.tupi.alonso@gmail.com"
+        },
+        {
+            "id": 0,
+            "first_name": "Mariana",
+            "middle_name": "Beatriz",
+            "last_name": "Malaguti",
+            "birth_date": "05/30/2002",
+            "gender": "F",
+            "phone_number": "16991229305",
+            "email": "mariana.malaguti@gmail.com"
+        },
+        {
+            "id": 20,
+            "first_name": "Raphael",
+            "middle_name": null,
+            "last_name": "Alonso",
+            "birth_date": "03/28/1999",
+            "gender": "M",
+            "phone_number": "16991229305",
+            "email": "raphael.alonso@gmail.com"
+        },
+        {
+            "id": null,
+            "first_name": "Aline",
+            "middle_name": null,
+            "last_name": "Capocci",
+            "birth_date": "05/18/1980",
+            "gender": "F",
+            "phone_number": "16991229305",
+            "email": "aline.capocci@gmail.com"
+        },
+        {
+            "id": 30,
+            "first_name": "Miguel",
+            "middle_name": "Angelo",
+            "last_name": "Alonso",
+            "birth_date": "09/15/1997",
+            "gender": "M",
+            "phone_number": "16991229305",
+            "email": "miguel.alonso@gmail.com"
+        }
+    ]
+}
