@@ -3,6 +3,7 @@ from models import Customer
 
 customers = [
     Customer(
+        id = 10,
         first_name = "Gabriel",
         middle_name = "Willian",
         last_name = "Alonso",
@@ -12,6 +13,7 @@ customers = [
         email = "gabriel.tupi.alonso@gmail.com"
     ),
     Customer(
+        id = 20,
         first_name = "Raphael",
         last_name = "Alonso",
         birth_date = date(1999,3,28),
@@ -20,6 +22,7 @@ customers = [
         email = "raphael.alonso@gmail.com"
     ),
     Customer(
+        id = 25,
         first_name = "Mariana",
         middle_name = "Beatriz",
         last_name = "Malaguti",
@@ -29,6 +32,7 @@ customers = [
         email = "mariana.malaguti@gmail.com"
     ),
     Customer(
+        id = None,
         first_name = "Aline",
         last_name = "Capocci",
         birth_date = date(1980,5,18),
