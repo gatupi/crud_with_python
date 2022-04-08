@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/commerce-style.css">
+  <style>
+    table {
+      border: 1px solid rgb(150,150,150);
+      border-spacing: 0;
+      margin: 20px auto;
+      border-radius: 15px;
+      box-shadow: 5px 5px 10px rgb(100,100,100);
+    }
+    table th:first-child {
+      border-top-left-radius: 15px;
+    }
+    table th:last-child {
+      border-top-right-radius: 15px;
+    }
+    table tr:last-child td:first-child {
+      border-bottom-left-radius: 15px;
+    }
+    table tr:last-child td:last-child {
+      border-bottom-right-radius: 15px;
+    }
+    th {
+      border-bottom: 1px solid rgb(150,150,150);
+      padding: 10px 12px;
+      background-color: var(--light-blue);
+    }
+    td {
+      padding: 6px 12px;
+      /* background-color: rgb(240,240,240); */
+    }
+    td, th{
+      border-right: 1px solid rgb(150,150,150);
+      text-align: center;
+    }
+    table tr td:last-child, th:last-child {
+      border-right: none;
+    }
+    #table-title {
+      margin: 10px auto;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Commerce Management System</h1>
+  </header>
+  <nav class="main-menu">
+      <span>Register</span>
+      <span>Query</span>
+  </nav>
+  <main>
+    <div id="table-title">
+      <h2>Customers</h2>
+    </div>
+    <table id="customer-list">
+      <thead>
+        <tr>
+          <th>Id</th>
+          <th>Name</th>
+          <th>Date of birth</th>
+          <th>Age</th>
+          <th>Gender</th>
+          <th>Phone number</th>
+          <th>Email</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>10</td>
+          <td>Gabriel Willian Alonso</td>
+          <td>12/08/1997</td>
+          <td>24</td>
+          <td>Male</td>
+          <td>(16) 99122-9305</td>
+          <td>gabriel.tupi.alonso@gmail.com</td>
+        </tr>
+  
+        <tr>
+          <td>10</td>
+          <td>Gabriel Willian Alonso</td>
+          <td>12/08/1997</td>
+          <td>24</td>
+          <td>Male</td>
+          <td>(16) 99122-9305</td>
+          <td>gabriel.tupi.alonso@gmail.com</td>
+        </tr>
+  
+        <tr>
+          <td>10</td>
+          <td>Gabriel Willian Alonso</td>
+          <td>12/08/1997</td>
+          <td>24</td>
+          <td>Male</td>
+          <td>(16) 99122-9305</td>
+          <td>gabriel.tupi.alonso@gmail.com</td>
+        </tr>
+  
+        <tr>
+          <td>10</td>
+          <td>Gabriel Willian Alonso</td>
+          <td>12/08/1997</td>
+          <td>24</td>
+          <td>Male</td>
+          <td>(16) 99122-9305</td>
+          <td>gabriel.tupi.alonso@gmail.com</td>
+        </tr>
+      </tbody>
+    </table>
+  </main>
+  <script>
+  </script>
+</body>
+</html>
