@@ -133,11 +133,7 @@
                 var cursor = birthDate.selectionStart;
                 if (value.charAt(cursor-1) == '/')
                     birthDate.value = value.substr(0, value.length-1);
-                //birthDate.setSelectionRange(cursor-3,cursor-3);
             }
-            // else {
-            //     console.log('Not focused!');
-            // }
         }
 
         function onBirthDateInput() {
@@ -154,16 +150,17 @@
                 birthDate.value = numeric.substr(0,2) + '/' + numeric.substr(2,2) + '/' + numeric.substr(4);
         }
 
-        var fname = document.getElementById('f-name');
-        //fname.value = 'Gabriel';
-        fname.focus();
-        //fname.setSelectionRange(2,2);
-        // console.log(document.activeElement.id);
+        function init() {
+            var fname = document.getElementById('f-name');
+            fname.focus();
 
-        var required = document.getElementsByClassName('required');
-        for (var i=0; i<required.length; i++) {
-            required[i].innerHTML += ' *';
+            var required = document.getElementsByClassName('required');
+            for (var i=0; i<required.length; i++) {
+                required[i].innerHTML += ' *';
+            }
         }
+
+        init();
     </script>
 </body>
 </html>
