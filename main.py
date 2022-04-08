@@ -1,7 +1,9 @@
+from http.client import HTTPResponse
 from flask import Flask
 from flask_restful import Api, Resource
 from flask import request
 from flask import Response
+from flask_cors import CORS
 from database import Database
 import json
 import json_ext
@@ -10,6 +12,7 @@ from datetime import date
 import str_ext
 
 app = Flask(__name__)
+CORS(app)
 api = Api(app)
 
 @app.route('/helloworld', methods=['GET'])
@@ -23,6 +26,7 @@ def get_customers():
 
 @app.route('/customer', methods=['POST', 'PUT'])
 def create_customer():
+
     _dict = request.get_json(force=True)
 
     birth_date = _dict['birth_date']

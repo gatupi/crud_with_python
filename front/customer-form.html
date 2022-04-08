@@ -19,20 +19,21 @@
         <div class="form customer-register">
             <span class="form-header">Customer Register</span>
             <div class="form-body">
-                <form action="">
+                <form action="http://127.0.0.1:5000/customer" method="POST" novalidate enctype="application/x-www-form-urlencoded">
+                    <input type="text" value="0" style="display:none" name="id">
                     <div class="form-part">
                         <div class="name-part">
                             <div class="label-text">
                                 <label class="required" for="f-name">First name</label>
-                                <input class="input-text" type="text" id="f-name" oninput="updateFullName()">
+                                <input class="input-text" type="text" id="f-name" name="first_name" oninput="updateFullName()">
                             </div>
                             <div class="label-text">
                                 <label for="m-name">Middle name</label>
-                                <input class="input-text" type="text" id="m-name" oninput="updateFullName()">
+                                <input class="input-text" type="text" id="m-name" name="middle_name" oninput="updateFullName()">
                             </div>
                             <div class="label-text">
                                 <label class="required" for="l-name">Last name</label>
-                                <input class="input-text" type="text" id="l-name" oninput="updateFullName()">
+                                <input class="input-text" type="text" id="l-name" name="last_name" oninput="updateFullName()">
                             </div>
                         </div>
                         <span id="full-name"></span>
@@ -41,15 +42,15 @@
                         <div class="birth-date-part">
                             <div class="label-text">
                                 <label class="required" for="birth-date">Birth date<span style="font-style:italic; color:rgb(85, 85, 85);"> (MM/dd/yyyy)</span></label>         
-                                <input class="input-text" type="text" id="birth-date" oninput="onBirthDateInput()">
+                                <input class="input-text" type="text" id="birth-date" name="birth_date" oninput="onBirthDateInput()">
                             </div>
                             <div class="label-text">
                                 <label class="required" for="phone-number">Phone number</label>     
-                                <input class="input-text" type="text" id="phone-number">
+                                <input class="input-text" type="text" name="phone_number" id="phone-number">
                             </div>
                             <div class="label-text">
                                 <label class="required" for="email">Email</label>      
-                                <input class="input-text" type="text" id="email">
+                                <input class="input-text" type="text" name="email" id="email">
                             </div>
                         </div>
                     </div>                
@@ -64,7 +65,7 @@
                             </div>
                             <div class="options">
                                 <button>Clear</button>
-                                <button>Done</button>
+                                <button type="submit">Done</button>
                             </div>
                         </div>
                     </div>
